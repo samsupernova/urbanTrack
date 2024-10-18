@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+    <title>Urban Track</title>
+  </head>
+  <body>
+    <div class="outer" id="content">
+      <div class="header">
+        <div class="logo">
+          <img id="img-logo" src="images/urban-track-logo.jpg" />
+        </div>
+
+        <div class="header-btns">
+          <div></div>
+          <div>
+            <button id="btn-home">HOME</button>
+            <button id="btn-track">TRACK</button>
+            <button id="btn-history">HISTORY</button>
+            <button id="btn-support">SUPPORT</button>
+            <button id="btn-about">ABOUT US</button>
+          </div>
+          <div></div>
+        </div>
+      </div>
+
+      <hr />
+      <div class="main">
+        <div class="left">
+          <div class="glance">
+            <button class="glance-button" id="btn-left">&#60;</button>
+            <img id="img-glance" src="images/urban-track-road1.jpg" />
+            <button class="glance-button" id="btn-right">&#62;</button>
+          </div>
+          <div class="map">
+            <iframe
+              id="map-frame"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509159!2d144.9537353153151!3d-37.81627997975164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11f3d5%3A0x5045675218ce6e0!2sFederation%20Square!5e0!3m2!1sen!2sau!4v1627408203240!5m2!1sen!2sau"
+              width="100%"
+              height="300"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+            ></iframe>
+          </div>
+          <button id="btn-select-location">Select Location</button>
+        </div>
+
+        <div class="right">
+          <div class="complain">
+            <div class="complain-first">
+              <span id="issue-label">Raise a ticket</span>
+              <button id="btn-dropdown">&#x25BC;</button>
+            </div>
+            <div class="complain-second">
+              <textarea
+                id="complain-input"
+                rows="10"
+                placeholder="Describe your issue..."
+              ></textarea>
+            </div>
+            <div class="complain-third">
+              <button id="btn-add-img">Add Image</button>
+              <button id="btn-submit">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer"><p>&copy; Nebula 2024</p></div>
+    </div>
+
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Select an Issue</h2>
+        <button class="modal-button" onclick="setIssue('Potholes')">
+          Potholes
+        </button>
+        <button class="modal-button" onclick="setIssue('Cleanliness')">
+          Cleanliness
+        </button>
+        <button class="modal-button" onclick="setIssue('Electricity')">
+          Electricity
+        </button>
+        <button class="modal-button" onclick="setIssue('Water')">Water</button>
+        <button class="modal-button" onclick="setIssue('Others')">
+          Others
+        </button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
